@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Socket Chat!</title>
+</head>
+<body>
+  <form id="editForm">
+    <input id="editBox" type="text" />    
+    <select name="channel" id="channelSelect">
+      <option value="general">General</option>
+      <option value="memes">Memes</option>
+    </select>
+    <input type="submit" />
+  </form>
+
+  <div id="messages"></div>
+
+  <!-- Here, at the bottom of the body, we import our socket.io library
+  for the client to use. We do this at the bottom to ensure that the page
+  has otherwise been setup for us. 
+  
+  When we created our socket.io server in /server/io.js, it added routes
+  for /socket.io/socket.io.js (as well as a minified version) so that our
+  server hosts the client code as well. -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- We then load our own client code, which express hosts for us. Remember
+  that the /assets url tree is the /hosted folder. -->
+  <script src="/assets/client.js"></script>
+</body>
+</html>

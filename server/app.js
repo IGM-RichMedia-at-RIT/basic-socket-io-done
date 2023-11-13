@@ -35,7 +35,6 @@ const router = require('./router.js');
 */
 const socketSetup = require('./io.js');
 
-
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
 const app = express();

@@ -1,4 +1,4 @@
-//Nothing new in controllers/index.js. See old examples.
+// Nothing new in controllers/index.js. See old examples.
 
 const hostIndex = (req, res) => {
   res.render('index');

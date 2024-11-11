@@ -85,6 +85,8 @@ const handleChannelSelect = () => {
     sets up the channel select.
 */
 const init = () => {
+    socket.on('testing', 'hello');
+
     handleEditBox();
     socket.on('general', displayMessage);
     handleChannelSelect();
